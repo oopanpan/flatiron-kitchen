@@ -1,0 +1,7 @@
+<h1>Edit Recipe</h1>
+<% if @recipe.errors.any? %>
+    <% @recipe.errors.full_messages.each do |msg| %>
+        <%= msg %>
+    <% end %>
+<% end %>
+<%= render partial: 'form', locals: {recipe: @recipe} %>
